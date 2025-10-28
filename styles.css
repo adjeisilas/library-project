@@ -3,7 +3,6 @@
   padding: 0;
 }
 .container {
-  height: 100vh;
   width: 100%;
   overflow: hidden;
   background-color: white;
@@ -18,7 +17,6 @@ nav {
   background-color: #2c3e50;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
- 
 
 .logo {
   font-size: 1.8rem;
@@ -32,7 +30,6 @@ nav {
 .logo:hover {
   color: #3498db;
 }
-
 
 button#add-btn {
   padding: 10px;
@@ -71,3 +68,111 @@ button#add-btn[disabled] {
   box-shadow: none;
 }
 
+
+.content {
+  padding: 32px 20px;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  min-height: calc(100vh - 60px);
+  box-sizing: border-box;
+  color: #2c3e50;
+}
+
+ 
+.content {
+  overflow-x: auto;
+}
+
+.content table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  margin: 8px auto;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+
+.content thead th {
+  text-align: left;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1f2d3d;
+  background: linear-gradient(
+    90deg,
+    rgba(236, 245, 255, 0.8),
+    rgba(247, 251, 255, 0.9)
+  );
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.content tbody td {
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  color: #34495e;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+  vertical-align: middle;
+}
+
+.content tbody tr {
+  background: transparent;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.content tbody tr:nth-child(even) {
+  background: #fbfdff;
+}
+
+.content tbody tr:hover {
+  background: #f1faff;
+  transform: translateY(-2px);
+}
+
+.content thead th:first-child,
+.content tbody td:first-child {
+  padding-left: 24px;
+}
+.content thead th:last-child,
+.content tbody td:last-child {
+  padding-right: 24px;
+  text-align: center;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #fff;
+}
+.status.read {
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+}
+.status.unread {
+  background: linear-gradient(90deg, #e67e22, #f39c12);
+}
+.status.reading {
+  background: linear-gradient(90deg, #3498db, #6dd5fa);
+}
+@media (max-width: 820px) {
+  .content table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  button#add-btn {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+  .content table {
+    min-width: 520px;
+  }
+}
