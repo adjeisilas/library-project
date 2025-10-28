@@ -2,3 +2,72 @@
   margin: 0;
   padding: 0;
 }
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 60px;
+  background-color: #2c3e50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+ 
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #3498db;
+}
+
+
+button#add-btn {
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(39, 174, 96, 0.18);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+button#add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(39, 174, 96, 0.22);
+  filter: brightness(1.02);
+}
+
+button#add-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(39, 174, 96, 0.16);
+}
+
+button#add-btn:focus {
+  outline: 3px solid rgba(46, 204, 113, 0.18);
+  outline-offset: 3px;
+}
+
+button#add-btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
