@@ -22,15 +22,52 @@
             <th id="thead">Pages</th>
             <th id="thead">Date</th>
             <th id="thead" class="status">Status</th>
+            <th id="thead">Actions</th>
           </tr>
         </thead>
-        <tbody>
-            <tr id="tbody">
-
-            </tr>
+        <tbody id="tbody">
         </tbody>
       </table>
     </div>
+    <div id="bookModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add New Book</h2>
+          <span class="close">&times;</span>
+        </div>
+        <form id="bookForm">
+          <div class="form-group">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+          </div>
+          <div class="form-group">
+            <label for="pages">Number of Pages:</label>
+            <input type="number" id="pages" name="pages" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Date Added:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="status">Reading Status:</label>
+            <select id="status" name="status" required>
+              <option value="read">Read</option>
+              <option value="reading">Currently Reading</option>
+              <option value="unread">Not Read</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancel-btn">Cancel</button>
+            <button type="submit" id="submit-btn">Add Book</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
