@@ -38,7 +38,7 @@ function displayBooks() {
       <td>${book.date}</td>
       <td><span class="status ${book.status}">${book.status.charAt(0).toUpperCase() + book.status.slice(1)}</span></td>
       <td>
-        <button class="action-btn toggle-status-btn" data-index="${index}">Toggle Status</button>
+        <button class="action-btn toggle-status-btn" data-index="${index}">Status</button>
         <button class="action-btn delete-btn" data-index="${index}">Delete</button>
       </td>
     `;
@@ -68,8 +68,6 @@ function toggleBookStatus(e) {
   
   if (book.status === 'read') {
     book.status = 'reading';
-  } else if (book.status === 'reading') {
-    book.status = 'unread';
   } else {
     book.status = 'read';
   }
